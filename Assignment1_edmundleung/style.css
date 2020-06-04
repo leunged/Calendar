@@ -1,0 +1,98 @@
+/* 
+Assignment 1: Today's Calendar
+      
+NAME: Edmund Leung
+EMAIL: leunged@sheridancollege.ca
+DATE CREATED: June 1, 2020
+DESCRIPTION: This CSS file contains the styling of the DOM elements in the Calendar App.
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-color: #eeeeee;
+	font-family: 'Arial', sans-serif;
+}
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.month-header,
+.day-of-week {
+	text-align: center;
+}
+
+.month-header {
+	margin-top: 20px;
+}
+
+.month-title {
+	font-size: calc(1em + 2vw);
+}
+
+.day-of-week,
+.date-block {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 7px;
+	margin: 10px;
+	color: #ffffff;
+}
+
+.day-name {
+	background-color: #222831;
+	padding: 10px;
+	font-size: calc(6px + 1vw);
+}
+
+.day-item {
+	height: 10vw;
+	min-height: 50px;
+	max-height: 120px;
+	background-color: #606774;
+	background-color: rgba(96, 103, 116, 0.4);
+	text-align: center;
+	display: inline-block;
+}
+
+p {
+	margin-top: 25%;
+	font-size: calc(4px + 2vw);
+}
+
+.current-month {
+	background-color: #606774;
+}
+
+.current-day {
+	background-color: #1f4e5f;
+}
+
+.short-text {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.short-text {
+		display: inline-block;
+	}
+	.full-text {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.day-of-week {
+		gap: 4px;
+		margin: 2px
+	}
+	.day-name {
+		padding: 2px;
+	}
+}
